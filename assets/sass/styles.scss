@@ -1,0 +1,389 @@
+// Colors
+
+$white:        #fff;
+$black:        #000;
+$almost-black: #222;
+$orange:       #E26E35;
+$light-blue:   #02b3e4;
+$steel-blue:   #7d97ad;
+$gun-metal:    #2d3c49;
+
+h1 {
+   font-family: 'Spinnaker', sans-serif;
+}
+
+
+
+.wrapper {
+   background: #fcfcfc;
+   margin: 0 auto;
+   max-width: 1140px;
+}
+
+@media (min-width: 576px) {
+   .jumbotron {
+      padding: 0;
+   }
+}
+.navbar.navbar-light.bg-light {
+   background-color: $orange !important;
+}
+
+.navbar-light .navbar-nav .active>.nav-link,
+.nav-item,
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-brand {
+   color: $white;
+}
+.btn-primary {
+   color: $white;
+   background-color: $orange;
+   border-color: $orange;
+}
+
+.fa.fa-navicon {
+   color: $white;
+}
+
+// https://stackoverflow.com/questions/42586729/bootstrap-4-change-hamburger-toggler-color
+/* change navbar-toggler inside lines color (stroke) */
+.navbar-light span.navbar-toggler-icon {
+   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+   color: $white;
+}
+
+// https://stackoverflow.com/questions/42586729/bootstrap-4-change-hamburger-toggler-color
+/* change hamburger button border color */
+button.navbar-toggler.navbar-toggler {
+   border-color: $white;
+}
+
+@media (max-width: 768px) {
+   nav.navbar {
+      background: $white;
+   }
+}
+.container {
+   max-width: 100%;
+}
+
+.container.fire {
+   padding-right: 0;
+   padding-left:  0;
+}
+
+.flamer  a {
+   min-width: 0 !important;
+}
+
+.flamer h1 {
+   margin: 0 auto;
+   text-align: center;
+   margin-top: 70px;
+}
+
+.flame-wrap {
+   -webkit-transform: translateY(0%) scale(0.55);
+   -ms-transform:     translateY(0%) scale(0.55);
+   transform:         translateY(0%) scale(0.55);
+}
+
+.flame-wrap {
+   -webkit-transition: all .3s ease-in-out;
+   -o-transition:      all .3s ease-in-out;
+   transition:         all .3s ease-in-out;
+}
+
+.flame-wrap {
+   margin:0 auto;
+   width:83px;
+   justify-items: center;
+}
+
+.flamer {
+   background: $almost-black;
+   margin: 0 auto;
+   width: 100%;
+}
+
+.flame {
+   position: absolute;
+   width: 120px;
+   left: calc( 50% - 50px );
+   height: 120px;
+   margin: 0 auto;
+   background: url(../images/flameboard.png?raw=1) 0px 0px no-repeat;
+}
+
+@keyframes flame-flicker { /* flame pulses */
+   0% {
+      background-position:0px 0px;
+      opacity:.9
+   }
+   25% {
+      background-position:0px 0px;
+   }
+   25.1% {
+      background-position:-100px 0px;
+   }
+   50% {
+      background-position:-100px 0px;
+      opacity:.6
+   }
+   50.1% {
+      background-position:-200px 0px;
+   }
+   75% {
+      background-position:-200px 0px;
+
+   }
+   75.1% {
+      background-position:-100px 0px;
+   }
+   100% {
+      background-position:-100px 0px;
+      opacity:.8
+   }
+}
+
+/* Individual Flames */
+
+#flame1 {
+   animation: flame-flicker 1.3s infinite;
+}
+#flame2 {
+   animation: flame-flicker .8s infinite;
+}
+
+#flame3 {
+   animation: flame-flicker .9s infinite;
+}
+
+#flame4 {
+   animation: flame-flicker 1.2s infinite;
+}
+
+#flame5 {
+   animation: flame-flicker 1.1s infinite;
+}
+.container {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   height: 120px;
+}
+
+.flame-wrap {
+   margin: 0 auto;
+   position: relative;
+   width: 83px;
+}
+
+
+.grid-wrapper {
+   box-sizing:      border-box;
+   display:         flex;
+   flex-wrap:       wrap;
+   flex:            0 1 auto;
+   justify-content: center;
+}
+
+.card-wrapper {
+   border-radius: 3px;
+   border:        1px solid $orange;
+   display:       inline-block;
+   margin-bottom: 32px;
+   max-width:     357px;
+   padding:       4px;
+}
+
+.home .card {
+   border-radius: 3px;
+   border:        1px solid $orange;
+   display:       inline-block;
+   margin:        4px;
+}
+
+.jumbotron {
+   padding: 0;
+}
+
+/* # Media Queries (mobile-first)
+---------------------------------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 410px) {
+
+   .flame {
+      position: absolute;
+      width: 110px;
+      left: calc( 50% - 50px );
+      height: 120px;
+      margin: 0 auto;
+      background: url(../images/flameboard.png?raw=1) 0px 0px no-repeat;
+   }
+
+   .container .flamer {
+      height: 120px;
+      display: block;
+   }
+
+   .flamer {
+      display: flex;
+   }
+
+   .flamer .flame-wrap {
+      align-self: flex-start;
+      text-align: center;
+   }
+
+   .flamer h1 {
+      color: $white;
+      margin: 70px auto 0;
+      text-align: center;
+      font-size: 32px;
+   }
+
+   .flamer h1 a {
+      font-size: 32px;
+   }
+}
+
+@media only screen and (min-width: 410px) {
+
+   .container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      height: 120px;
+   }
+
+   .flame {
+      position: absolute;
+      width: 100px;
+      left: calc( 50% - 50px );
+      height: 120px;
+      margin: 0 auto;
+      background: url(../images/flameboard.png?raw=1) 0px 0px no-repeat;
+   }
+
+   .container .flamer {
+      height: 120px;
+      display: block;
+   }
+
+   .flamer {
+      display: flex;
+   }
+
+   .flamer .flame-wrap {
+      align-self: flex-start;
+      text-align: center;
+   }
+
+   .flamer h1 {
+      color: $white;
+      margin: 70px auto 0;
+      text-align: center;
+      font-size: 32px;
+   }
+
+   .flamer h1 a {
+      font-size: 32px;
+   }
+}
+
+@media only screen and (min-width: 545px) {
+
+   .container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      height: 70px;
+   }
+
+   h1.company-name {
+      color: $white;
+   }
+
+   .flamer {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 30px 0 15px;
+   }
+
+   .flamer h1 {
+      margin: 0;
+      //text-align: right;
+      font-size: 40px;
+   }
+
+   .flame {
+      position: absolute;
+      width: 100px;
+      //left: calc( 50% - 50px );
+      height: 120px;
+      margin: 0 auto;
+      background: url(../images/flameboard.png?raw=1) 0px 0px no-repeat;
+   }
+
+   .container .flamer {
+      height: 70px;
+      display: flex;
+   }
+
+
+
+   .flamer .flame-wrap {
+      align-self: center;
+      //text-align: center;
+      justify-self: flex-end;
+   }
+
+   .flamer h1 {
+      align-self: center;
+      justify-self: flex-end;
+   }
+
+   //.flamer h1 a {
+   //   font-size: 32px;
+   //}
+   .grid-wrapper {
+      justify-content: space-between;
+      width:           66%;
+   }
+}
+
+@media only screen and (max-width: 715px) {
+
+   .grid-wrapper {
+      justify-content: space-between;
+      width:           66%;
+   }
+}
+
+@media only screen and (max-width: 1075px) {
+
+   .grid-wrapper {
+      justify-content: space-around;
+      width:           100%;
+   }
+
+   .card-wrapper { //361 x 494
+      border-radius: 3px;
+      border:        1px solid $orange;
+      display:       inline-block;
+      margin-bottom: 32px;
+      max-width:     357px;
+      padding:       4px;
+   }
+
+}
+
+@media only screen and (min-width: 1076px) {
+
+   .grid-wrapper {
+
+      justify-content: space-between;
+      width:           100%;
+   }
+}
