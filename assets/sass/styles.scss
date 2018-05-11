@@ -8,11 +8,19 @@ $light-blue:   #02b3e4;
 $steel-blue:   #7d97ad;
 $gun-metal:    #2d3c49;
 
+$max-width:       1140px;
+$smallest-screen: $max-width - 820px; // 320px;
+//$smaller-screen:  $max-width - 660px; // 480px;
+$iphone6sp-port:  $max-width - 601px; // 539px;
+//$iphone5s-land:   $max-width - 573px; // 567px;
+$small-screen:    $max-width - 330px; // 810px;
+//$iphone6sp-land:  $max-width - 181px; // 959px;
+$medium-screen:   $max-width - 117px; // 1023px;
+$large-screen:    $max-width + 40px;  // 1180px;
+
 h1 {
    font-family: 'Spinnaker', sans-serif;
 }
-
-
 
 .wrapper {
    background: #fcfcfc;
@@ -20,11 +28,6 @@ h1 {
    max-width: 1140px;
 }
 
-@media (min-width: 576px) {
-   .jumbotron {
-      padding: 0;
-   }
-}
 .navbar.navbar-light.bg-light {
    background-color: $orange !important;
 }
@@ -41,9 +44,6 @@ h1 {
    border-color: $orange;
 }
 
-.fa.fa-navicon {
-   color: $white;
-}
 
 // https://stackoverflow.com/questions/42586729/bootstrap-4-change-hamburger-toggler-color
 /* change navbar-toggler inside lines color (stroke) */
@@ -186,6 +186,7 @@ button.navbar-toggler.navbar-toggler {
    flex-wrap:       wrap;
    flex:            0 1 auto;
    justify-content: center;
+   margin-top:      34px;
 }
 
 .card-wrapper {
@@ -204,8 +205,53 @@ button.navbar-toggler.navbar-toggler {
    margin:        4px;
 }
 
-.jumbotron {
+.card .btn-primary {
+   cursor: pointer;
+}
+
+.card .btn-primary:hover {
+   background: $almost-black;
+}
+
+.jumbotron,
+.jumbotron-fluid {
    padding: 0;
+   margin: 0;
+}
+
+footer {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   height: 60px;
+   color: $white;
+   background-color: $orange;
+}
+
+footer .social-icons {
+   color: $white;
+}
+
+.social-icons ul li{
+   align-self: center;
+   display: inline-flex;
+   padding: 0 5px;
+}
+
+footer .social-icons ul {
+   list-style-type: none;
+   margin-bottom: 0;
+}
+
+.my-github img,
+.my-linkedin img,
+.my-twitter img {
+   height: 35px;
+}
+
+.icons svg,
+.my-svg svg {
+   fill: $white !important;
 }
 
 /* # Media Queries (mobile-first)
