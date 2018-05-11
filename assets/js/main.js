@@ -1,19 +1,25 @@
 ;(function ( $, window, document, undefined ) {
    'use strict';
 
+   // https://stackoverflow.com/questions/14504079/jquery-trigger-function-above-a-certain-window-width
    jQuery( document ).ready( function ( $ ) {
 
-      $( '#linwoodCard' ).on( 'click', function () {
-         $( '#linwoodModal' ).modal( "toggle" );
-      } );
+      var windowWidth = $( window ).width();
+      if ( windowWidth > 768 ) {
+         // Do stuff here
 
-      $( '#ocascrCard' ).on( 'click', function () {
-         $( '#ocascrModal' ).modal( "toggle" );
-      } );
+         $( '#linwoodCard' ).on( 'click', function () {
+            $( '#linwoodModal' ).modal( "toggle" );
+         } );
 
-      $( '#sheilaCard' ).on( 'click', function () {
-         $( '#sheilaModal' ).modal( "toggle" );
-      } );
+         $( '#ocascrCard' ).on( 'click', function () {
+            $( '#ocascrModal' ).modal( "toggle" );
+         } );
+
+         $( '#sheilaCard' ).on( 'click', function () {
+            $( '#sheilaModal' ).modal( "toggle" );
+         } );
+      }
 
    } );
 
