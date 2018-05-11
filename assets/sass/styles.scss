@@ -223,6 +223,8 @@ footer {
    display: flex;
    align-items: center;
    justify-content: space-around;
+   flex-wrap: wrap;
+   flex: 1 0 auto;
    height: 60px;
    color: $white;
    background-color: $orange;
@@ -406,6 +408,28 @@ footer .social-icons ul {
       justify-content: space-between;
       width:           66%;
    }
+}
+
+@media only screen and (max-width: 800px) {
+
+   footer  {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: no-wrap;
+      padding: 10px;
+      flex: 1 0 auto;
+      flex-direction: column;
+      height: 160px;
+   }
+   .reserved,
+   .social-icons,
+   .educational {
+      padding: 5px;
+   }
+
+
+
 }
 
 @media only screen and (max-width: 1075px) {
