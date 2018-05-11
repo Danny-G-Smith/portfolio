@@ -224,7 +224,7 @@
         function findElementQueriesElements(container) {
             var query = getQuery(container);
 
-            for (var selector in allQueries) if (allQueries.hasOwnProperty(selector)) {
+            for (var selector in allQueries) if (allQueries.hasOwnProperty(mode)) {
                 // find all elements based on the extract query selector from the element query rule
                 var elements = query(selector, container);
 
@@ -384,9 +384,7 @@
                     } else if (4 === rules[i].type) {
                         readRules(rules[i].cssRules || rules[i].rules);
                     } else if (3 === rules[i].type) {
-                        if(rules[i].styleSheet.hasOwnProperty("cssRules")) {
-                            readRules(rules[i].styleSheet.cssRules);
-                        }
+                        readRules(rules[i].styleSheet.cssRules);
                     }
                 }
             }
@@ -447,6 +445,7 @@
                 }
             }
 
+            // findElementQueriesElements();
             findResponsiveImages();
         };
 

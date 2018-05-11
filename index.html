@@ -11,24 +11,26 @@
          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
    <link rel="stylesheet" href="assets/dist/css/styles.css">
    <link href="https://fonts.googleapis.com/css?family=Spinnaker" rel="stylesheet">
-   <script src="css-element-queries/src/ResizeSensor.js"></script>
-   <script src="css-element-queries/src/ElementQueries.js"></script>
+   <script src="assets/js-static/ResizeSensor.js"></script>
+   <script src="assets/js-static/ElementQueries.js"></script>
    <!--endbuild-->
 </head>
 <body>
 <div class="wrapper">
    <div class="container fire">
-       <div class="flamer">
-          <a href="/"><div class="flame-wrap">
-             <div id="flame1" class="flame" ></div>
-             <div id="flame2" class="flame" ></div>
-             <div id="flame3" class="flame" ></div>
-             <div id="flame4" class="flame" ></div>
-             <div id="flame5" class="flame" ></div>
-          </div ></a>
-          <h1 class="company-name">CampfirePixels</h1>
-       </div >
-   </div >
+      <div class="flamer">
+         <a href="/">
+            <div class="flame-wrap">
+               <div id="flame1" class="flame"></div>
+               <div id="flame2" class="flame"></div>
+               <div id="flame3" class="flame"></div>
+               <div id="flame4" class="flame"></div>
+               <div id="flame5" class="flame"></div>
+            </div>
+         </a>
+         <h1 class="company-name">CampfirePixels</h1>
+      </div>
+   </div>
    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">Home</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -46,8 +48,13 @@
    </nav>
 
    <div class="jumbotron jumbotron-fluid">
-      <img src="/assets/images/hero.jpg" alt="hero image">
-      <div class="container">
+      <div data-responsive-image>
+         <img data-src="/assets/images/bg@320x84.jpg"/>
+         <img min-width="350" data-src="/assets/images/bg@320x84.jpg"    alt="background image"/>
+         <img min-width="700" data-src="/assets/images/bg@700x142.jpg"   alt="background image"/>
+         <img min-width="810" data-src="/assets/images/bg@810x213.jpg"   alt="background image"/>
+         <img min-width="1023" data-src="/assets/images/bg@1023x269.jpg" alt="background image"/>
+         <img min-width="1140" data-src="/assets/images/bg@1140x300.jpg" alt="background image"/>
       </div>
    </div>
 
@@ -55,42 +62,41 @@
       <div class="card-wrapper">
          <div class="card" id="linwoodCard">
 
-            <img src="assets/images/linwoodcenter.org.small.jpg"
-                 alt="Image of Linwoodcenter.org website">
+            <img src="assets/images/linwoodcenter.org.small.jpg" alt="Picture of Linwoodcenter website">
             <div class="card-body">
-               <h5 class="card-title">Linwoodcenter.org</h5>
-               <p class="card-text">WordPress commercial theme retro-fitted to site requirements. Custom widgets.</p>
-               <a href="http://linwoodcenter.org" class="btn btn-primary" >Visit Linwoodcenter</a>
+               <h5 class="card-title">Linwoodcenter.com</h5>
+               <p class="card-text">WordPress commercial theme, with minimal work added.</p>
+               <a href="https://linwoodcenter.org/" class="btn btn-primary">Visit Linwoodcenter</a>
             </div>
 
 
             <!-- Modal -->
             <div class="modal fade" id="linwoodModal" tabindex="-1" role="dialog" aria-labelledby="linwoodModalLabel"
                  aria-hidden="true">
-               <div class="modal-dialog" role="document">
+               <div class="modal-lg modal-dialog" role="document">
                   <div class="modal-content">
                      <div class="modal-header">
-                        <h5 class="modal-title" id="linwoodModalLabel">Modal title</h5>
+                        <h5 class="modal-title" id="linwoodModalLabel">Linwoodcenter.org</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                            <span aria-hidden="true">&times;</span>
                         </button>
                      </div>
                      <div class="modal-body">
-                        ...
-                     </div>
+                        <img src="assets/images/linwoodcenter@700x525.jpg" height="525" width="700"
+                             alt="Picture of Linwoodcenter website" /></div>
                      <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                      </div>
                   </div>
                </div>
             </div>
-         </div> <!-- .card-dgs -->
+         </div> <!-- .card -->
       </div> <!-- card-wrapper -->
 
       <div class="card-wrapper">
          <div class="card" id="ocascrCard">
 
-            <img src="assets/images/ocascr.small.jpg">
+            <img src="assets/images/ocascr.small.jpg" alt="Picture of OCASCR website">
             <div class="card-body">
                <h5 class="card-title">OCASCR.org</h5>
                <p class="card-text">WordPress commercial theme with custom design work.</p>
@@ -100,7 +106,7 @@
             <!-- Modal -->
             <div class="modal fade" id="ocascrModal" tabindex="-1" role="dialog" aria-labelledby="ocascrModalLabel"
                  aria-hidden="true">
-               <div class="modal-dialog" role="document">
+               <div class="modal-lg modal-dialog" role="document">
                   <div class="modal-content">
                      <div class="modal-header">
                         <h5 class="modal-title" id="ocascrModalLabel">Modal title</h5>
@@ -109,7 +115,7 @@
                         </button>
                      </div>
                      <div class="modal-body">
-                        ...
+                        <img src="assets/images/ocascr@700x525.jpg" height="525" width="700"  alt="Picture of OCASCR website"/>
                      </div>
                      <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
@@ -123,7 +129,7 @@
       <div class="card-wrapper">
          <div class="card" id="sheilaCard">
 
-            <img src="assets/images/sheila.com.small.jpg">
+            <img src="assets/images/sheila.com.small.jpg"  alt="Picture of Sheila Sisemore's website">
             <div class="card-body">
                <h5 class="card-title">Sheila Sisemore, P.C., LPC</h5>
                <p class="card-text">WordPress commercial theme, with minimal work added.</p>
@@ -134,7 +140,7 @@
             <!-- Modal -->
             <div class="modal fade" id="sheilaModal" tabindex="-1" role="dialog" aria-labelledby="sheilaModalLabel"
                  aria-hidden="true">
-               <div class="modal-dialog" role="document">
+               <div class="modal-lg modal-dialog" role="document">
                   <div class="modal-content">
                      <div class="modal-header">
                         <h5 class="modal-title" id="sheilaModalLabel">Modal title</h5>
@@ -143,8 +149,8 @@
                         </button>
                      </div>
                      <div class="modal-body">
-                        ...
-                     </div>
+                        <img src="assets/images/sheila@700x525.jpg" height="525" width="700"
+                             alt="Picture of Sheila Sisemore's website"/></div>
                      <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                      </div>
@@ -154,15 +160,27 @@
          </div> <!-- .card -->
       </div> <!-- card-wrapper -->
    </div> <!-- grid-wrapper -->
+
+   <footer class="nav">
+      <div class="reserved">
+         &reg; 2018 All Rights Reserved
+      </div>
+      <div class="social-icons">
+         <ul>
+            <li><a href="https://twitter.com/dannygsmith" class="my-twitter"><img src="assets/images/twitter.svg"
+                                                                                  alt="Twitter icon" class="my-svg"></a></li>
+            <li><a href="https://github.com/dannygsmith" class="my-github"><img src="assets/images/github.svg"
+                                                                                alt="Github icon" class="my-svg"></a></li>
+            <li><a href="https://www.linkedin.com/in/dannygsmith/" class="my-linkedin"><img
+                  src="assets/images/linkedin-in.svg" alt="Linkedin icon" class="my-svg"></a></li>
+         </ul>
+      </div>
+      <div class="educational">
+         This site is for education only
+      </div>
+   </footer>
 </div> <!-- wrapper -->
 
-<footer class="nav">
-   <span class="educational">2018 All Rights Reserved</span>
-   <div class="social-icons">
-
-   </div>
-   <span class="reserved">2018 All Rights Reserved</span>
-</footer>
        <!--build:js js/main.min.js -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
