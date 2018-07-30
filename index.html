@@ -49,11 +49,17 @@
 
    <div class="jumbotron jumbotron-fluid">
       <div data-responsive-image>
-         <img data-src="assets/dist/images/bg@320x84.jpg"/>
-         <img width="350"  data-src="assets/dist/images/bg@320x84.jpg"    alt="background image"/>
-         <img width="810"  data-src="assets/dist/images/bg@810x213.jpg"   alt="background image"/>
-         <img width="1023" data-src="assets/dist/images/bg@1023x269.jpg" alt="background image"/>
-         <img width="1140" data-src="assets/dist/images/bg@1140x300.jpg" alt="background image"/>
+         <!--<img data-src="assets/dist/images/bg@320x84.jpg"/>-->
+         <!--<img max-width="350"  data-src="/assets/dist/images/bg@320x84.jpg"   src="/assets/dist/images/bg@320x84.jpg"    alt="background image"/>-->
+         <!--<img max-width="810"  data-src="/assets/dist/images/bg@810x213.jpg"  src="/assets/dist/images/bg@810x213.jpg"   alt="background image"/>-->
+         <!--<img max-width="1023" data-src="/assets/dist/images/bg@1023x269.jpg" src="/assets/dist/images/bg@1023x269.jpg" alt="background image"/>-->
+         <!--<img max-width="1140" data-src="/assets/dist/images/bg@1140x300.jpg" src="/assets/dist/images/bg@1140x300.jpg" alt="background image"/>-->
+
+         <img srcset="/assets/dist/images/bg@320x84.jpg,
+                      /assets/dist/images/bg@810x213.jpg 1.5x,
+                      /assets/dist/images/bg@1023x269.jpg 2x"
+                 src="/assets/dist/images/bg@1140x300.jpg" alt="background image">
+
       </div>
    </div>
 
